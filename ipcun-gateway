@@ -8,9 +8,9 @@ PKG_EDITION:=beta
 PKG_DATE:=2018.04.24
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/v$(PKG_VERSION)-$(PKG_RELEASE)
-PKG_SOURCE:=softether-src-v$(PKG_VERSION)-$(PKG_RELEASE)-$(PKG_EDITION).tar.gz
-PKG_SOURCE_URL:=http://jp.softether-download.com/files/softether/v$(PKG_VERSION)-$(PKG_RELEASE)-$(PKG_EDITION)-$(PKG_DATE)-tree/Source_Code/
-PKG_MD5SUM:=928d882d5fc23e00f0a5fa4ebf292ab9
+PKG_SOURCE:=softether-src-v4.21-9613-beta.tar.gz
+PKG_SOURCE_URL:=https://sources.lede-project.org/
+#PKG_MD5SUM:=928d882d5fc23e00f0a5fa4ebf292ab9
 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/nls.mk
@@ -24,7 +24,7 @@ define Package/ipcun-gateway
 	DEPENDS:=+libpthread +librt +libreadline +libopenssl +libncurses +zlib +kmod-tun
 endef
 
-define Package/softethervpn/conffiles
+define Package/ipcun-gateway/conffiles
 	/usr/bin/vpn_bridge.config
 endef
 
